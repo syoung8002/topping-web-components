@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target wc --name {{options.package}} ./src/web-component.js",
-    "start": "serve -l {{portGenerated}} dist",
+    "start": "serve -l 8080 dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
