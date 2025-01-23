@@ -8,7 +8,7 @@ module.exports = {
   configureWebpack: {
     output: {
       libraryTarget: 'window',
-      filename: '{{name}}.js',
+      filename: '{{options.package}}.js',
       libraryExport: 'default',
     },
   },
@@ -20,7 +20,7 @@ module.exports = {
       .tap(options => {
           options.compilerOptions = {
           ...options.compilerOptions,
-          isCustomElement: tag => tag === '{{name}}',
+          isCustomElement: tag => tag === '{{options.package}}',
         };
         return options;
       });

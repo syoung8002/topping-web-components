@@ -116,4 +116,4 @@ class WebComponentElement extends HTMLElement {
     }
 }
 
-window.customElements.define('<component-name>', WebComponentElement);
+window.customElements.define('{{options.package}}', WebComponentElement);

@@ -1,10 +1,10 @@
 {
-  "name": "{{name}}",
+  "name": "{{options.package}}",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target wc --name {{name}} ./src/web-component.js",
+    "build": "vue-cli-service build --target wc --name {{options.package}} ./src/web-component.js",
     "start": "serve -l {{portGenerated}} dist",
     "lint": "vue-cli-service lint"
   },
