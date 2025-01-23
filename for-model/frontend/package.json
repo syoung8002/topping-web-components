@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target wc --name {{options.package}} ./src/web-component.js",
+    "build": "vue-cli-service build --target wc --name {{options.package}}-app ./src/web-component.js",
     "start": "serve -l 8080 dist",
     "lint": "vue-cli-service lint"
   },

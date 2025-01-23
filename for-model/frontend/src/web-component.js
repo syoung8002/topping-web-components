@@ -18,9 +18,11 @@ Vue.use(VueRouter);
 
 const axios = require("axios").default;
 axios.backend = null; //"http://localhost:8088";
-axios.backendUrl = new URL(axios.backend);
-axios.fixUrl = function(original){
-    if(!axios.backend && original.indexOf("/")==0) return original;
+if (axios.backend) axios.backendUrl = new URL(axios.backend);
+axios.fixUrl = function(original) {
+    if(!axios.backend && original.indexOf("/")==0) {
+        return original;
+    }
 
     var url = null;
 
@@ -120,4 +122,4 @@ class WebComponentElement extends HTMLElement {
     }
 }
 
-window.customElements.define('{{options.package}}', WebComponentElement);
+window.customElements.define('{{options.package}}-app', WebComponentElement);
